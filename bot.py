@@ -145,20 +145,20 @@ __**Hi.. PanindiaFilmZ Admin, I Can Provide My Channels Invite links** __
 
 __**🌟 #PANINDIAFILMZ #OURMENIA 3D~EXP🔥 **__
 
-__✨  PIF Deals 24/7 :- 
-@PIFDeals__
+**__✨  PIF Deals 24/7 :- 
+@PIFDeals__**
 
-__✨ Rare Hidden Adult Movies 2.0 
-@Telugu_Adults_Rare_Hidden_Movies__
+**__✨ Rare Hidden Adult Movies 2.0 
+@Telugu_Adults_Rare_Hidden_Movies__**
 
-__✨ PIF Fitter Bot :-
- @PanindiaFilmz_bot__
+**__✨ PIF Fitter Bot :-
+ @PanindiaFilmz_bot__**
 
-__✨ BoTz Updates :-
- @BoTzUpdates0__
+**__✨ BoTz Updates :-
+ @BoTzUpdates0__**
 
-__✨ File's Added Updates :- 
- @PIFOficial**__
+**__✨ File's Added Updates :- 
+ @PIFOficial__**
 
 __**© ᴀʟʟ ᴄᴏᴘʏʀɪɢʜᴛꜱ ʀᴇꜱᴇʀᴠᴇᴅ ᴛᴏ ᴍᴏᴠɪᴇ ᴏᴡɴᴇʀꜱ ᴏɴʟʏ !!**__
 
