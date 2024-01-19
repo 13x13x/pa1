@@ -105,7 +105,7 @@ async def chk(_, cb : CallbackQuery):
                 ]
             )
             add_user(cb.from_user.id)
-            await cb.message.edit("**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powerd By : @PanindiaFilmZ__**".format(cb.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard, disable_web_page_preview=True)
+            await cb.message.edit("**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\nPowerd By : @PanindiaFilmZ**".format(cb.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard, disable_web_page_preview=True)
         print(cb.from_user.first_name +" Is started Your Bot!")
     except UserNotParticipant:
         await cb.answer("🙅‍♂️ You are not joined to channel join and try again. 🙅‍♂️")
@@ -139,51 +139,36 @@ async def PanindiaFilmZ_command(_, m: Message):
             ]
  
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await m.reply("""**🙃 Welcome To My PanindiaFilmZ Community!! Cheak Our Channels & Groups List Below!!**
+            await m.reply("""**🙃 __Welcome To My PanindiaFilmZ Community!! Cheak Our Channels & Groups List Below!!**__
 
-**Hi.. PanindiaFilmZ Admin, I Can Provide My Channels Invite links** 
+__**Hi.. PanindiaFilmZ Admin, I Can Provide My Channels Invite links** __
 
-**🌟 #PANINDIAFILMZ #OURMENIA 3D~EXP🔥 **
+__**🌟 #PANINDIAFILMZ #OURMENIA 3D~EXP🔥 **__
 
-**✨ Tamil - Kannada :-
- https://t.me/+mGplIsWLBsNmMzdl**
+__✨  PIF Deals 24/7 :- 
+@PIFDeals__
 
-**✨ Hindi - Malayalam :-
- https://t.me/+Oc2rrg_Kl0hiN2Jl**
+__✨ Rare Hidden Adult Movies 2.0 
+@Telugu_Adults_Rare_Hidden_Movies__
 
-**✨ Hollywood - Dubbed :-
- https://t.me/+O7kEPSdRDthmOGM9**
+__✨ PIF Fitter Bot :-
+ @PanindiaFilmz_bot__
 
-**✨ Movies Request Group :-
- https://t.me/+37-TDCcQqltlOTRl**
+__✨ BoTz Updates :-
+ @BoTzUpdates0__
 
-**✨ 2023 DVD - Prints :-
- https://t.me/+Pf6Qyzw7g-g0OGE1**
+__✨ File's Added Updates :- 
+ @PIFOficial**__
 
-**✨  PIF Deals 24/7 :- 
-https://t.me/PIFDeals**
+__**© ᴀʟʟ ᴄᴏᴘʏʀɪɢʜᴛꜱ ʀᴇꜱᴇʀᴠᴇᴅ ᴛᴏ ᴍᴏᴠɪᴇ ᴏᴡɴᴇʀꜱ ᴏɴʟʏ !!**__
 
-**✨ Rare Hidden Adult Movies 2.0 
-https://t.me/Telugu_Adults_Rare_Hidden_Movies**
+__**ᴀʟʟ ʟᴀɴɢᴜᴀɢᴇ ɴᴇᴡ ᴍᴏᴠɪᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ | தமிழ் | తెలుగు | हिंदी | മലയാളം | ಕನ್ |**__
 
-**✨ PIF Fitter Bot :-
- @PanindiaFilmz_bot**
+__**Target - Reaching ur Self 🎯**__
 
-**✨ BoTz Updates :-
- https://t.me/BoTzUpdates0**
+__**For Any Queries - @PanIndia_Flimz_Admin_bot**__
 
-**✨ File's Added Updates :- 
- https://t.me/PIFOficial**
-
-**© ᴀʟʟ ᴄᴏᴘʏʀɪɢʜᴛꜱ ʀᴇꜱᴇʀᴠᴇᴅ ᴛᴏ ᴍᴏᴠɪᴇ ᴏᴡɴᴇʀꜱ ᴏɴʟʏ !!**
-
-**ᴀʟʟ ʟᴀɴɢᴜᴀɢᴇ ɴᴇᴡ ᴍᴏᴠɪᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ | தமிழ் | తెలుగు | हिंदी | മലയാളം | ಕನ್ |**
-
-**Target - Reaching ur Self 🎯**
-
-**For Any Queries - @PanIndia_Flimz_Admin_bot**
-
-**@PanindiaFilmZ 🔥**""", reply_markup=reply_markup)
+__**@PanindiaFilmZ 🔥**__""", reply_markup=reply_markup)
  
     except Exception as e:
         print(f"Error: {e}")
