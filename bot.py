@@ -139,7 +139,51 @@ async def PanindiaFilmZ_command(_, m: Message):
             ]
  
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await m.reply("**🙃 ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ ᴄᴏᴍᴍᴜɴɪᴛʏ!ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴏᴜʀ ᴄʜᴀɴɴᴇʟꜱ ᴀɴᴅ ɢʀᴏᴜᴘꜱ ʟɪꜱᴛ ʙᴇʟᴏᴡ!**", reply_markup=reply_markup)
+            await m.reply("""**🙃 Welcome To My PanindiaFilmZ Community!! Cheak Our Channels & Groups List Below!!**
+
+**Hi.. PanindiaFilmZ Admin, I Can Provide My Channels Invite links** 
+
+**🌟 #PANINDIAFILMZ #OURMENIA 3D~EXP🔥 **
+
+**✨ Tamil - Kannada :-
+ https://t.me/+mGplIsWLBsNmMzdl**
+
+**✨ Hindi - Malayalam :-
+ https://t.me/+Oc2rrg_Kl0hiN2Jl**
+
+**✨ Hollywood - Dubbed :-
+ https://t.me/+O7kEPSdRDthmOGM9**
+
+**✨ Movies Request Group :-
+ https://t.me/+37-TDCcQqltlOTRl**
+
+**✨ 2023 DVD - Prints :-
+ https://t.me/+Pf6Qyzw7g-g0OGE1**
+
+**✨  PIF Deals 24/7 :- 
+https://t.me/PIFDeals**
+
+**✨ Rare Hidden Adult Movies 2.0 
+https://t.me/Telugu_Adults_Rare_Hidden_Movies**
+
+**✨ PIF Fitter Bot :-
+ @PanindiaFilmz_bot**
+
+**✨ BoTz Updates :-
+ https://t.me/BoTzUpdates0**
+
+**✨ File's Added Updates :- 
+ https://t.me/PIFOficial**
+
+**© ᴀʟʟ ᴄᴏᴘʏʀɪɢʜᴛꜱ ʀᴇꜱᴇʀᴠᴇᴅ ᴛᴏ ᴍᴏᴠɪᴇ ᴏᴡɴᴇʀꜱ ᴏɴʟʏ !!**
+
+**ᴀʟʟ ʟᴀɴɢᴜᴀɢᴇ ɴᴇᴡ ᴍᴏᴠɪᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ | தமிழ் | తెలుగు | हिंदी | മലയാളം | ಕನ್ |**
+
+**Target - Reaching ur Self 🎯**
+
+**For Any Queries - @PanIndia_Flimz_Admin_bot**
+
+**@PanindiaFilmZ 🔥**""", reply_markup=reply_markup)
  
     except Exception as e:
         print(f"Error: {e}")
