@@ -117,24 +117,24 @@ async def join_command(_, m: Message):
     try:
         await app.get_chat_member(cfg.CHID, m.from_user.id) 
         if m.chat.type == enums.ChatType.PRIVATE:
-            buttons = [
+            keyboard = [
     [
-        InlineKeyboardButton('➕↖️ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ ↗️➕', url='http://t.me/{temp.U_NAME}?startgroup=true')
+        InlineKeyboardMarkup('➕↖️ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ ↗️➕', url="http://t.me/{temp.U_NAME}?startgroup=true")
     ],
     [
-        InlineKeyboardButton('🧞‍♀️ ꜱᴇᴀʀᴄʜ 🧐', switch_inline_query_current_chat=''),
-        InlineKeyboardButton('🔔 ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ 🤖', url='https://t.me/PanindiaFilmZ')
+        InlineKeyboardMarkup('🧞‍♀️ ꜱᴇᴀʀᴄʜ 🧐', switch_inline_query_current_chat=''),
+        InlineKeyboardButton('🔔 ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ 🤖', url="https://t.me/PanindiaFilmZ")
     ],
     [
-        InlineKeyboardButton('🛒 ᴅᴇᴀʟꜱ 🦾', url='https://t.me/PIFDeals'),
-        InlineKeyboardButton('🥵 ʀᴀʀᴇ ʜɪᴅᴅᴇɴ ᴍᴏᴠɪᴇꜱ ♥️', url='https://t.me/PIFRareHiddenMovies')
+        InlineKeyboardMarkup('🛒 ᴅᴇᴀʟꜱ 🦾', url="https://t.me/PIFDeals"),
+        InlineKeyboardMarkup('🥵 ʀᴀʀᴇ ʜɪᴅᴅᴇɴ ᴍᴏᴠɪᴇꜱ ♥️', url="https://t.me/PIFRareHiddenMovies")
     ],
     [
-        InlineKeyboardButton('🔗 ʙᴏᴛᴢ ᴀʀᴇᴀ', url='https://t.me/BoTzUpdates0'),
-        InlineKeyboardButton('⚙ ™ ᴘɪꜰ', url='https://t.me/PIFOficial')
+        InlineKeyboardMarkup('🔗 ʙᴏᴛᴢ ᴀʀᴇᴀ', url="https://t.me/BoTzUpdates0"),
+        InlineKeyboardMarkup('⚙ ™ ᴘɪꜰ', url="https://t.me/PIFOficial")
     ],
     [
-        InlineKeyboardButton('⪦ ᴍᴏᴠɪᴇs ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ ⪧', url='https://t.me/+37-TDCcQqltlOTRl')
+        InlineKeyboardMarkup('⪦ ᴍᴏᴠɪᴇs ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ ⪧', url="https://t.me/+37-TDCcQqltlOTRl")
     ]
 ]
 
