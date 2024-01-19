@@ -131,7 +131,7 @@ async def join_command(_, m: Message):
                 ],
                 [
                     InlineKeyboardButton("🔗 ʙᴏᴛᴢ ᴀʀᴇᴀ", url="https://t.me/BoTzUpdates0"),
-                    InlineKeyboardButton("⚙ ™ ᴘɪꜰ", url="https://t.me/PIFOficial")
+                    InlineKeyboardButton("⚙ ᴍᴏᴠɪᴇꜱ ᴜᴘᴅᴀᴛᴇꜱ", url="https://t.me/PIFOficial")
                 ],
                 [
                     InlineKeyboardButton("⪦ ᴍᴏᴠɪᴇs ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ ⪧", url="https://t.me/+37-TDCcQqltlOTRl")
@@ -139,7 +139,7 @@ async def join_command(_, m: Message):
             ]
  
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await m.reply("✅۞ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ ᴄᴏᴍᴍᴜɴɪᴛʏ! ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴏᴜʀ ᴄʜᴀɴɴᴇʟꜱ ᴀɴᴅ ɢʀᴏᴜᴘꜱ ʟɪꜱᴛ ʙᴇʟᴏᴡ🎖️", reply_markup=reply_markup)
+            await m.reply("**🙃 ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ ᴄᴏᴍᴍᴜɴɪᴛʏ! ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴏᴜʀ ᴄʜᴀɴɴᴇʟꜱ ᴀɴᴅ ɢʀᴏᴜᴘꜱ ʟɪꜱᴛ ʙᴇʟᴏᴡ🎖️**", reply_markup=reply_markup)
  
     except Exception as e:
         print(f"Error: {e}")
