@@ -119,22 +119,22 @@ async def join_command(_, m: Message):
         if m.chat.type == enums.ChatType.PRIVATE:
             keyboard = [
     [
-        InlineKeyboardMarkup('➕🍁 ᴛᴀᴍɪʟ - ᴋᴀɴɴᴀᴅᴀ 🎖️➕', url="https://t.me/+mGplIsWLBsNmMzdl")
+        InlineKeyboardMarkup("🍁 ᴛᴀᴍɪʟ - ᴋᴀɴɴᴀᴅᴀ 🎖️", url="https://t.me/+mGplIsWLBsNmMzdl")
     ],
     [
-        InlineKeyboardMarkup('🧞‍♀️ ʜɪɴᴅɪ - ᴍᴀʟᴀʏᴀʟᴀᴍ 🧐', url="https://t.me/+Oc2rrg_Kl0hiN2Jl"),
-        InlineKeyboardMarkup('🔔 ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ 🤖', url="https://t.me/PanindiaFilmZ")
+        InlineKeyboardMarkup("🧞‍♀️ ʜɪɴᴅɪ - ᴍᴀʟᴀʏᴀʟᴀᴍ 🧐", url="https://t.me/+Oc2rrg_Kl0hiN2Jl"),
+        InlineKeyboardMarkup("🔔 ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ 🤖", url="https://t.me/PanindiaFilmZ")
     ],
     [
-        InlineKeyboardMarkup('🛒 ᴅᴇᴀʟꜱ 🦾', url="https://t.me/PIFDeals"),
-        InlineKeyboardMarkup('🥵 ʀᴀʀᴇ ʜɪᴅᴅᴇɴ ᴍᴏᴠɪᴇꜱ ♥️', url="https://t.me/PIFRareHiddenMovies")
+        InlineKeyboardMarkup("🛒 ᴅᴇᴀʟꜱ 🦾", url="https://t.me/PIFDeals"),
+        InlineKeyboardMarkup("🥵 ʀᴀʀᴇ ʜɪᴅᴅᴇɴ ᴍᴏᴠɪᴇꜱ ♥️", url="https://t.me/PIFRareHiddenMovies")
     ],
     [
-        InlineKeyboardMarkup('🔗 ʙᴏᴛᴢ ᴀʀᴇᴀ', url="https://t.me/BoTzUpdates0"),
-        InlineKeyboardMarkup('⚙ ™ ᴘɪꜰ', url="https://t.me/PIFOficial")
+        InlineKeyboardMarkup("🔗 ʙᴏᴛᴢ ᴀʀᴇᴀ", url="https://t.me/BoTzUpdates0"),
+        InlineKeyboardMarkup("⚙ ™ ᴘɪꜰ", url="https://t.me/PIFOficial")
     ],
     [
-        InlineKeyboardMarkup('⪦ ᴍᴏᴠɪᴇs ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ ⪧', url="https://t.me/+37-TDCcQqltlOTRl")
+        InlineKeyboardMarkup("⪦ ᴍᴏᴠɪᴇs ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ ⪧", url="https://t.me/+37-TDCcQqltlOTRl")
     ]
 ]
 
