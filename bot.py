@@ -191,23 +191,23 @@ async def fcast(_, m : Message):
     
 # Function to handle /join command
 @app.on_message(filters.command("join"))
-async def join_command(_, m: Message):
+async def op(_, m :Message):
     try:
-        # Check if the user is already in the database
-        if not await add_user(m.from_user.id):
-            await m.reply_text("You are already a member!")
-        else:
-            # Send a welcome message and join links
-            welcome_text = "Welcome to the community! Check out our channels and groups:"
-            join_links = [
-                "Tamil - Kannada: [Link](https://t.me/+mGplIsWLBsNmMzdl)",
-                "Hindi - Malayalam: [Link](https://t.me/+Oc2rrg_Kl0hiN2Jl)",
-                # Add other join links here...
-            ]
-
-            join_message = f"{welcome_text}\n\n" + "\n".join(join_links)
-            await m.reply_text(join_message, parse_mode="markdown", disable_web_page_preview=True)
-    except Exception as e:
+        await app.get_chat_member(cfg.CHID, m.from_user.id) 
+        if m.chat.type == enums.ChatType.PRIVATE:
+            keyboard = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("🗯 Channel", url="https://t.me/PanindiaFilmZ"),
+                        InlineKeyboardButton("💬 0", url="https://t.me/PIFDeals")
+                    ],[
+                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/AutoAcceptRequest32_bot?startgroup")
+                    ]
+                ]
+            )
+            add_user(m.from_user.id)
+            await m.reply_photo("https://graph.org/file/18091323ff1c954bb5c97.jpg", caption="**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powerd By : @PanindiaFilmZ__**".format(m.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard)
+            
         print(f"Error in /join command: {e}")
         
 print("I'm Alive Now!")
