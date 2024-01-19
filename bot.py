@@ -115,28 +115,34 @@ async def chk(_, cb : CallbackQuery):
 @app.on_message(filters.command("join"))
 async def join_command(_, m: Message):
     try:
-        await app.get_chat_member(cfg.CHID, m.from_user.id) 
+        await app.get_chat_member(cfg.CHID, m.from_user.id)
         if m.chat.type == enums.ChatType.PRIVATE:
-            buttons = [
-    [
-        InlineKeyboardButton("🍁 ᴛᴀᴍɪʟ - ᴋᴀɴɴᴀᴅᴀ 🎖️", url="https://t.me/+mGplIsWLBsNmMzdl")
-    ],
-    [
-        InlineKeyboardButton("🧞‍♀️ ʜɪɴᴅɪ - ᴍᴀʟᴀʏᴀʟᴀᴍ 🧐", url="https://t.me/+Oc2rrg_Kl0hiN2Jl"),
-        InlineKeyboardButton("🔔 ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ 🤖", url="https://t.me/PanindiaFilmZ")
-    ],
-    [
-        InlineKeyboardButton("🛒 ᴅᴇᴀʟꜱ 🦾", url="https://t.me/PIFDeals"),
-        InlineKeyboardButton("🥵 ʀᴀʀᴇ ʜɪᴅᴅᴇɴ ᴍᴏᴠɪᴇꜱ ♥️", url="https://t.me/PIFRareHiddenMovies")
-    ],
-    [
-        InlineKeyboardButton("🔗 ʙᴏᴛᴢ ᴀʀᴇᴀ", url="https://t.me/BoTzUpdates0"),
-        InlineKeyboardButton("⚙ ™ ᴘɪꜰ", url="https://t.me/PIFOficial")
-    ],
-    [
-        InlineKeyboardButton("⪦ ᴍᴏᴠɪᴇs ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ ⪧", url="https://t.me/+37-TDCcQqltlOTRl")
-    ]
-]
+            keyboard = [
+                [
+                    InlineKeyboardButton("🍁 ᴛᴀᴍɪʟ - ᴋᴀɴɴᴀᴅᴀ 🎖️", url="https://t.me/+mGplIsWLBsNmMzdl")
+                ],
+                [
+                    InlineKeyboardButton("🧞‍♀️ ʜɪɴᴅɪ - ᴍᴀʟᴀʏᴀʟᴀᴍ 🧐", url="https://t.me/+Oc2rrg_Kl0hiN2Jl"),
+                    InlineKeyboardButton("🔔 ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ 🤖", url="https://t.me/PanindiaFilmZ")
+                ],
+                [
+                    InlineKeyboardButton("🛒 ᴅᴇᴀʟꜱ 🦾", url="https://t.me/PIFDeals"),
+                    InlineKeyboardButton("🥵 ʀᴀʀᴇ ʜɪᴅᴅᴇɴ ᴍᴏᴠɪᴇꜱ ♥️", url="https://t.me/PIFRareHiddenMovies")
+                ],
+                [
+                    InlineKeyboardButton("🔗 ʙᴏᴛᴢ ᴀʀᴇᴀ", url="https://t.me/BoTzUpdates0"),
+                    InlineKeyboardButton("⚙ ™ ᴘɪꜰ", url="https://t.me/PIFOficial")
+                ],
+                [
+                    InlineKeyboardButton("⪦ ᴍᴏᴠɪᴇs ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ ⪧", url="https://t.me/+37-TDCcQqltlOTRl")
+                ]
+            ]
+ 
+            reply_markup = InlineKeyboardMarkup(keyboard)
+            await m.reply("Your message here", reply_markup=reply_markup)
+ 
+    except Exception as e:
+        print(f"Error: {e}")
             add_user(m.from_user.id)
             await m.reply_text("✅ **۞ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ ᴄᴏᴍᴍᴜɴɪᴛʏ! ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴏᴜʀ ᴄʜᴀɴɴᴇʟꜱ ᴀɴᴅ ɢʀᴏᴜᴘꜱ ʟɪꜱᴛ ʙᴇʟᴏᴡ🎖️**", reply_markup=keyboard)
 
