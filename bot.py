@@ -127,6 +127,15 @@ async def join_command(_, m: Message):
             add_user(m.from_user.id)
             await m.reply_text("✅ **Thank you for joining! Stay updated with our latest deals and updates.**", reply_markup=keyboard)
 
+    except UserNotParticipant:
+        key = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("🔄 Check Again 🔄", "chk")
+                ]
+            ]
+        )
+        await m.reply_text("⚠️ **Access Denied!**\n\nPlease join [@PIFDeals](https://t.me/PIFDeals) to use me. If you joined, click the 'Check Again' button to confirm.", reply_markup=key)
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ info ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
