@@ -207,6 +207,5 @@ async def op(_, m :Message):
             )
             add_user(m.from_user.id)
             await m.reply_photo("https://graph.org/file/18091323ff1c954bb5c97.jpg", caption="**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powerd By : @PanindiaFilmZ__**".format(m.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard)
-    
 print("I'm Alive Now!")
 app.run()
