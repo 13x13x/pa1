@@ -187,5 +187,28 @@ async def fcast(_, m : Message):
 
     await lel.edit(f"✅Successfull to `{success}` users.\n❌ Faild to `{failed}` users.\n👾 Found `{blocked}` Blocked users \n👻 Found `{deactivated}` Deactivated users.")
 
+    #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Join  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    
+# Function to handle /join command
+@app.on_message(filters.command("join"))
+async def join_command(_, m: Message):
+    try:
+        # Check if the user is already in the database
+        if not await add_user(m.from_user.id):
+            await m.reply_text("You are already a member!")
+        else:
+            # Send a welcome message and join links
+            welcome_text = "Welcome to the community! Check out our channels and groups:"
+            join_links = [
+                "Tamil - Kannada: [Link](https://t.me/+mGplIsWLBsNmMzdl)",
+                "Hindi - Malayalam: [Link](https://t.me/+Oc2rrg_Kl0hiN2Jl)",
+                # Add other join links here...
+            ]
+
+            join_message = f"{welcome_text}\n\n" + "\n".join(join_links)
+            await m.reply_text(join_message, parse_mode="markdown", disable_web_page_preview=True)
+    except Exception as e:
+        print(f"Error in /join command: {e}")
+        
 print("I'm Alive Now!")
 app.run()
