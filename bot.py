@@ -87,26 +87,9 @@ async def op(_, m :Message):
         )
         await m.reply_text("**⚠️Access Denied!⚠️\n\nPlease Join @{} to use me.If you joined click check again button to confirm.**".format(cfg.FSUB), reply_markup=key)
 
-#━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Join Command ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-@app.on_message(filters.command("join"))
-async def join_command(_, m: Message):
-    try:
-        await app.get_chat_member(cfg.CHID, m.from_user.id) 
-        if m.chat.type == enums.ChatType.PRIVATE:
-            keyboard = InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("🔔 Updates", url="https://t.me/PIFDeals")
-                    ]
-                ]
-            )
-            add_user(m.from_user.id)
-            await m.reply_text("✅ **Thank you for joining! Stay updated with our latest deals and updates.**", reply_markup=keyboard)
-
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ callback ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
- @app.on_callback_query(filters.regex("chk"))
+@app.on_callback_query(filters.regex("chk"))
 async def chk(_, cb : CallbackQuery):
     try:
         await app.get_chat_member(cfg.CHID, cb.from_user.id)
@@ -126,6 +109,24 @@ async def chk(_, cb : CallbackQuery):
         print(cb.from_user.first_name +" Is started Your Bot!")
     except UserNotParticipant:
         await cb.answer("🙅‍♂️ You are not joined to channel join and try again. 🙅‍♂️")
+
+#━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Join Command ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+@app.on_message(filters.command("join"))
+async def join_command(_, m: Message):
+    try:
+        await app.get_chat_member(cfg.CHID, m.from_user.id) 
+        if m.chat.type == enums.ChatType.PRIVATE:
+            keyboard = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("🔔 Updates", url="https://t.me/PIFDeals")
+                    ]
+                ]
+            )
+            add_user(m.from_user.id)
+            await m.reply_text("✅ **Thank you for joining! Stay updated with our latest deals and updates.**", reply_markup=keyboard)
+
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ info ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
