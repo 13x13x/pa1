@@ -139,22 +139,10 @@ async def join_command(_, m: Message):
             ]
  
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await m.reply("Your message here", reply_markup=reply_markup)
+            await m.reply("✅۞ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ ᴄᴏᴍᴍᴜɴɪᴛʏ! ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴏᴜʀ ᴄʜᴀɴɴᴇʟꜱ ᴀɴᴅ ɢʀᴏᴜᴘꜱ ʟɪꜱᴛ ʙᴇʟᴏᴡ🎖️", reply_markup=reply_markup)
  
     except Exception as e:
         print(f"Error: {e}")
-            add_user(m.from_user.id)
-            await m.reply_text("✅ **۞ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ ᴄᴏᴍᴍᴜɴɪᴛʏ! ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴏᴜʀ ᴄʜᴀɴɴᴇʟꜱ ᴀɴᴅ ɢʀᴏᴜᴘꜱ ʟɪꜱᴛ ʙᴇʟᴏᴡ🎖️**", reply_markup=keyboard)
-
-    except UserNotParticipant:
-        key = InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("🔄 Check Again 🔄", "chk")
-                ]
-            ]
-        )
-        await m.reply_text("⚠️ **Access Denied!**\n\nPlease join [@PIFDeals](https://t.me/PIFDeals) to use me. If you joined, click the 'Check Again' button to confirm.", reply_markup=key)
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ info ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
