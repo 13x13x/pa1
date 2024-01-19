@@ -119,11 +119,11 @@ async def join_command(_, m: Message):
         if m.chat.type == enums.ChatType.PRIVATE:
             keyboard = [
     [
-        InlineKeyboardMarkup('➕↖️ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ ↗️➕', url="http://t.me/{temp.U_NAME}?startgroup=true")
+        InlineKeyboardMarkup('➕🍁 ᴛᴀᴍɪʟ - ᴋᴀɴɴᴀᴅᴀ 🎖️➕', url="https://t.me/+mGplIsWLBsNmMzdl")
     ],
     [
-        InlineKeyboardMarkup('🧞‍♀️ ꜱᴇᴀʀᴄʜ 🧐', switch_inline_query_current_chat=''),
-        InlineKeyboardButton('🔔 ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ 🤖', url="https://t.me/PanindiaFilmZ")
+        InlineKeyboardMarkup('🧞‍♀️ ʜɪɴᴅɪ - ᴍᴀʟᴀʏᴀʟᴀᴍ 🧐', url="https://t.me/+Oc2rrg_Kl0hiN2Jl"),
+        InlineKeyboardMarkup('🔔 ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ 🤖', url="https://t.me/PanindiaFilmZ")
     ],
     [
         InlineKeyboardMarkup('🛒 ᴅᴇᴀʟꜱ 🦾', url="https://t.me/PIFDeals"),
