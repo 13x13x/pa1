@@ -138,9 +138,6 @@ async def join_command(_, m: Message):
     ]
 ]
 
-# Creating InlineKeyboardMarkup
-keyboard_markup = InlineKeyboardMarkup(buttons)
-                
             add_user(m.from_user.id)
             await m.reply_text("✅ **۞ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ ᴄᴏᴍᴍᴜɴɪᴛʏ! ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴏᴜʀ ᴄʜᴀɴɴᴇʟꜱ ᴀɴᴅ ɢʀᴏᴜᴘꜱ ʟɪꜱᴛ ʙᴇʟᴏᴡ🎖️**", reply_markup=keyboard)
 
