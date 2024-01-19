@@ -125,7 +125,7 @@ async def join_command(_, m: Message):
                 ]
             )
             add_user(m.from_user.id)
-            await m.reply_text("✅ **Welcome to the PanindiaFilmZ community! Check out our channels and groups List Below 🎖️**", reply_markup=keyboard)
+            await m.reply_text("✅ **۞ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ ᴄᴏᴍᴍᴜɴɪᴛʏ! ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴏᴜʀ ᴄʜᴀɴɴᴇʟꜱ ᴀɴᴅ ɢʀᴏᴜᴘꜱ ʟɪꜱᴛ ʙᴇʟᴏᴡ🎖️**", reply_markup=keyboard)
 
     except UserNotParticipant:
         key = InlineKeyboardMarkup(
