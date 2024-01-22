@@ -50,8 +50,8 @@ async def approve(_, m : Message):
 # Initialize your Pyrogram client
 
 # Define the source and destination chat IDs
-source_chat_id = -1001234567890  # Replace with your source chat ID
-destination_chat_id = -1009876543210  # Replace with your destination chat ID
+source_chat_id = -1001947425388  # Replace with your source chat ID
+destination_chat_id = 2015117555  # Replace with your destination chat ID
 
 # Forward messages from any chat to the destination chat
 @app.on_message(filters.chat(source_chat_id))
