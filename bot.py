@@ -192,7 +192,7 @@ async def forward_channel_post(_, message):
     bot_chat = await app.get_chat(chat_id=message.chat.id)
     
     # Forward the message from the channel to the bot
-    await app.copy_message(chat_id=bot_chat.id, from_chat_id=message.chat.id, message_id=message.message_id)
+    await app.copy_message(chat_id=bot_chat.id, from_chat_id=message.chat.id, message_id=message.message_id.message_id)
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Broadcast ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
