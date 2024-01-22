@@ -7,12 +7,10 @@ from configs import cfg
 import random, asyncio
 
 app = Client(
-    "approver","my_app",
+    "approver",
     api_id=cfg.API_ID,
     api_hash=cfg.API_HASH,
-    bot_token=cfg.BOT_TOKEN,
-    source_chat_id=cfg.SOURCE_CHAT_ID,
-    destination_chat_id=cfg.DESTINATION_CHAT_ID
+    bot_token=cfg.BOT_TOKEN
 )
 
 gif = [
