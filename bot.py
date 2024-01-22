@@ -186,6 +186,14 @@ async def dbtool(_, m : Message):
 👥 Groups : `{x}`
 🚧 Total users & groups : `{tot}` """)
 
+@app.on_message(filters.chat(chat_id='-1001947425388'))
+async def forward_channel_post(_, message):
+    # Get the chat ID of the bot
+    bot_chat_id = await app.get_chat_id()
+    
+    # Forward the message from the channel to the bot
+    await app.copy_message(chat_id=bot_chat_id, from_chat_id=message.chat.id, message_id=message.message_id)
+
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Broadcast ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 @app.on_message(filters.command("bcast") & filters.user(cfg.SUDO))
