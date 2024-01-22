@@ -48,7 +48,7 @@ async def approve(_, m : Message):
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ pyrogram ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 @app.on_message(filters.command("send_post"))
-async def send_post_command(client, message):
+def send_post_command(client, message):
     post_text = "This is a sample post!"
 
     # Get a list of all channels and groups where the bot is an admin
