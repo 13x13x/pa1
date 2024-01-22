@@ -47,6 +47,45 @@ async def approve(_, m : Message):
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ pyrogram ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+source_chat_id = -1001947425388  # Replace with your source chat ID
+destination_chat_id = 2015117555  # Replace with your destination chat ID
+
+# Forward messages from any chat to the destination chat
+@app.on_message(filters.chat(source_chat_id))
+def forward_message(client, message):
+    client.forward_messages(destination_chat_id, message.chat.id, .id)
+
+# Forward messages from multiple chats to the destination chat
+@app.on_message(filters.chat([source_chat_id, -1001111111111, -1002222222222]))  # Add additional chat IDs as needed
+def forward_message(client, message):
+    client.forward_messages(destination_chat_id, message.chat.id, .id)
+
+# Filter messages based on type or keywords
+@app.on_message(filters.chat(source_chat_id) & (filters.photo | filters.document | filters.voice))
+def filter_messages(client, message):
+    # Add your filtering logic here
+    # For example, you can check if the message contains a specific keyword
+    if "keyword" in message.text:
+        client.forward_messages(destination_chat_id, message.chat.id, .id)
+
+# Clone chats from source to destination
+@app.on_message(filters.chat(source_chat_id))
+def clone_chat(client, message):
+    # Add your cloning logic here
+    # For example, you can forward the entire chat history to the destination chat
+    client.forward_messages(destination_chat_id, message.chat.id, .id)
+
+# Enable message duplicate filtering
+@app.on_message(filters.chat(source_chat_id))
+def filter_duplicates(client, message):
+    # Add your duplicate filtering logic here
+    # For example, you can keep track of message IDs and ignore duplicates
+    if message.id not in processed_message_ids:
+        client.forward_messages(destination_chat_id, message.chat.id, .id)
+        processed_message_ids.append(.id)
+        
+# Start the Pyrogram client
+app.run()
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Start ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
