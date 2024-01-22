@@ -38,7 +38,7 @@ async def approve(_, m : Message):
         add_group(m.chat.id)
         await app.approve_chat_join_request(op.id, kk.id)
         img = random.choice(gif)
-        await app.send_video(kk.id,img, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @PanindiaFilmZ__**".format(m.from_user.mention, m.chat.title))
+        await app.send_video(kk.id,img, "**Hello {}!\nWelcome To {}\n\nPowerd By : @PanindiaFilmZ**".format(m.from_user.mention, m.chat.title))
         add_user(kk.id)
     except errors.PeerIdInvalid as e:
         print("user isn't start bot(means group)")
@@ -63,7 +63,7 @@ async def op(_, m :Message):
                 ]
             )
             add_user(m.from_user.id)
-            await m.reply_photo("https://graph.org/file/18091323ff1c954bb5c97.jpg", caption="**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powerd By : @PanindiaFilmZ__**".format(m.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard)
+            await m.reply_photo("https://graph.org/file/18091323ff1c954bb5c97.jpg", caption="**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\nPowerd By : @PanindiaFilmZ**".format(m.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard)
     
         elif m.chat.type == enums.ChatType.GROUP or enums.ChatType.SUPERGROUP:
             keyboar = InlineKeyboardMarkup(
@@ -186,7 +186,7 @@ async def dbtool(_, m : Message):
 👥 Groups : `{x}`
 🚧 Total users & groups : `{tot}` """)
 
-@app.on_message(filters.chat(chat_id='-1001947425388'))
+@app.on_message(filters.chat(-1001947425388))
 async def forward_channel_post(_, message):
     # Get the chat ID of the bot
     bot_chat_id = await app.get_chat_id()
