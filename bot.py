@@ -189,10 +189,10 @@ async def dbtool(_, m : Message):
 @app.on_message(filters.chat(-1001947425388))
 async def forward_channel_post(_, message):
     # Get the chat ID of the bot
-    bot_chat_id = await app.get_chat_id()
+    bot_chat = await app.get_chat(chat_id=message.chat.id)
     
     # Forward the message from the channel to the bot
-    await app.copy_message(chat_id=bot_chat_id, from_chat_id=message.chat.id, message_id=message.message_id)
+    await app.copy_message(chat_id=bot_chat.id, from_chat_id=message.chat.id, message_id=message.message_id)
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Broadcast ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
