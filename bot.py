@@ -5,6 +5,7 @@ from pyrogram.errors.exceptions.flood_420 import FloodWait
 from database import add_user, add_group, all_users, all_groups, users, remove_user
 from configs import cfg
 import random, asyncio
+from pyrogram.errors import ChannelInvalid
 
 app = Client(
     "approver",
@@ -47,21 +48,26 @@ async def approve(_, m : Message):
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ pyrogram ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+# Define the command handler
 @app.on_message(filters.command("send_post"))
 def send_post_command(client, message):
-    post_text = "This is a sample post!"
+    post_text = "This is a sample post."
 
-    # Get a list of all channels and groups where the bot is an admin
-    admin_chats = [
-        chat.id
-        for chat in client.get_chat_members(message.from_user.id)
-        if chat.status == "administrator" and chat.can_post_messages
-    ]
+    try:
+        # Get a list of all channels and groups where the bot is an admin
+        admin_chats = [
+            chat.id
+            for chat in client.get_chat_members(message.from_user.id)
+            if chat.status == "administrator" and chat.can_post_messages
+        ]
 
-    # Send the post to each admin chat
-    for chat_id in admin_chats:
-        client.send_message(chat_id, post_text)
+        # Send the post to each admin chat
+        for chat_id in admin_chats:
+            client.send_message(chat_id, post_text)
 
+    except Exception as e:
+        print(f"Error: {e}")
+    
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Start ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 @app.on_message(filters.command("start"))
