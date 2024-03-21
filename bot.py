@@ -39,7 +39,7 @@ async def approve(_, m : Message):
         add_group(m.chat.id)
         await app.approve_chat_join_request(op.id, kk.id)
         img = random.choice(gif)
-        await app.send_video(kk.id,img, "**Hello {}!\nWelcome To {}\n\nPowerd By : @PanindiaFilmZ**".format(m.from_user.mention, m.chat.title))
+        await app.send_video(kk.id,img, "**Hello {}!\nBig Upgrade Summer Sale |Upto 75% On Home Appliances & Electronics & More/nMiddle Class Persons Must Useful Our 👉 @VCdeals24 Channel !! Buy It Products On Low Price {}\n\nPowerd By : @PanindiaFilmZ**".format(m.from_user.mention, m.chat.title))
         add_user(kk.id)
     except errors.PeerIdInvalid as e:
         print("user isn't start bot(means group)")
@@ -79,7 +79,7 @@ async def op(_, m :Message):
                 [
                     [
                         InlineKeyboardButton("🗯 Channel", url="https://t.me/PanindiaFilmZ"),
-                        InlineKeyboardButton("💬 Support", url="https://t.me/PIFDeals")
+                        InlineKeyboardButton("💬 Support", url="https://t.me/Vcdeals24")
                     ],[
                         InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/AutoAcceptRequest32_bot?startgroup")
                     ]
@@ -128,7 +128,7 @@ async def chk(_, cb : CallbackQuery):
                 ]
             )
             add_user(cb.from_user.id)
-            await cb.message.edit("**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\nPowerd By : @PanindiaFilmZ**".format(cb.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard, disable_web_page_preview=True)
+            await cb.message.edit("**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\nPowerd By : @PanindiaFilmZ**".format(cb.from_user.mention, "t.me/VCdeals24"), reply_markup=keyboard, disable_web_page_preview=True)
         print(cb.from_user.first_name +" Is started Your Bot!")
     except UserNotParticipant:
         await cb.answer("🙅‍♂️ You are not joined to channel join and try again. 🙅‍♂️")
@@ -149,7 +149,7 @@ async def PanindiaFilmZ_command(_, m: Message):
                     InlineKeyboardButton("🔔 ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ 🤖", url="https://t.me/PanindiaFilmZ")
                 ],
                 [
-                    InlineKeyboardButton("🛒 ᴅᴇᴀʟꜱ 🦾", url="https://t.me/PIFDeals"),
+                    InlineKeyboardButton("🛒 ᴅᴇᴀʟꜱ 🦾", url="https://t.me/VCDeals24"),
                     InlineKeyboardButton("🥵 ʀᴀʀᴇ ʜɪᴅᴅᴇɴ ᴍᴏᴠɪᴇꜱ ♥️", url="https://t.me/PIFRareHiddenMovies")
                 ],
                 [
@@ -168,8 +168,8 @@ __**Hi.. PanindiaFilmZ Admin, I Can Provide My Channels Invite links** __
 
 __**🌟 #PANINDIAFILMZ #OURMENIA 3D~EXP🔥 **__
 
-**__✨  PIF Deals 24/7 :- 
-@PIFDeals__**
+**__✨  VC Deals 24/7 :- 
+@VCDeals24__**
 
 **__✨ Rare Hidden Adult Movies 2.0 
 @Telugu_Adults_Rare_Hidden_Movies__**
