@@ -79,7 +79,7 @@ async def op(_, m :Message):
                 [
                     [
                         InlineKeyboardButton("🗯 Channel", url="https://t.me/PanindiaFilmZ"),
-                        InlineKeyboardButton("💬 Support", url="https://t.me/Vcdeals24")
+                        InlineKeyboardButton("💬 Support", url="https://t.me/Great_Indian_Shopping_loot_deals")
                     ],[
                         InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/AutoAcceptRequest32_bot?startgroup")
                     ]
@@ -128,7 +128,7 @@ async def chk(_, cb : CallbackQuery):
                 ]
             )
             add_user(cb.from_user.id)
-            await cb.message.edit("**🦊 Hello {}!\nI'm an auto approve [VCdeals24]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\nPowerd By : @PanindiaFilmZ**".format(cb.from_user.mention, "t.me/VCdeals24"), reply_markup=keyboard, disable_web_page_preview=True)
+            await cb.message.edit("**🦊 Hello {}!\nI'm an auto approve [Great_Indian_Shopping_loot_deals]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\nPowerd By : @PanindiaFilmZ**".format(cb.from_user.mention, "t.me/Great_Indian_Shopping_loot_deals"), reply_markup=keyboard, disable_web_page_preview=True)
         print(cb.from_user.first_name +" Is started Your Bot!")
     except UserNotParticipant:
         await cb.answer("🙅‍♂️ You are not joined to channel join and try again. 🙅‍♂️")
@@ -149,7 +149,7 @@ async def PanindiaFilmZ_command(_, m: Message):
                     InlineKeyboardButton("🔔 ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ 🤖", url="https://t.me/PanindiaFilmZ")
                 ],
                 [
-                    InlineKeyboardButton("🛒 ᴅᴇᴀʟꜱ 🦾", url="https://t.me/VCDeals24"),
+                    InlineKeyboardButton("🛒 ᴅᴇᴀʟꜱ 🦾", url="https://t.me/Great_Indian_Shopping_loot_deals"),
                     InlineKeyboardButton("🥵 ʀᴀʀᴇ ʜɪᴅᴅᴇɴ ᴍᴏᴠɪᴇꜱ ♥️", url="https://t.me/PIFRareHiddenMovies")
                 ],
                 [
@@ -168,8 +168,8 @@ __**Hi.. PanindiaFilmZ Admin, I Can Provide My Channels Invite links** __
 
 __**🌟 #PANINDIAFILMZ #OURMENIA 3D~EXP🔥 **__
 
-**__✨  VC Deals 24/7 :- 
-@VCDeals24__**
+**__✨  GIS Deals 24/7 :- 
+@Great_Indian_Shopping_loot_deals__**
 
 **__✨ Rare Hidden Adult Movies 2.0 
 @Telugu_Adults_Rare_Hidden_Movies__**
