@@ -112,29 +112,6 @@ async def op(_, m :Message):
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ callback ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-@app.on_callback_query(filters.regex("chk"))
-async def chk(_, cb : CallbackQuery):
-    try:
-        await app.get_chat_member(cfg.CHID, cb.from_user.id)
-        if cb.message.chat.type == enums.ChatType.PRIVATE:
-            keyboard = InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("🗯 Channel", url="https://t.me/PanindiaFilmZ"),
-                        InlineKeyboardButton("💬 Support", url="https://t.me/PIFDeals")
-                    ],[
-                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/AutoAcceptRequest32_bot?startgroup")
-                    ]
-                ]
-            )
-            add_user(cb.from_user.id)
-            await cb.message.edit("**🦊 Hello {}!\nI'm an auto approve [Great_Indian_Shopping_loot_deals]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\nPowerd By : @PanindiaFilmZ**".format(cb.from_user.mention, "t.me/Great_Indian_Shopping_loot_deals"), reply_markup=keyboard, disable_web_page_preview=True)
-        print(cb.from_user.first_name +" Is started Your Bot!")
-    except UserNotParticipant:
-        await cb.answer("🙅‍♂️ You are not joined to channel join and try again. 🙅‍♂️")
-
-#━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Join Command ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
 @app.on_message(filters.command("PIFChannels"))
 async def Pifchannels_command(_, m: Message):
     try:
@@ -193,9 +170,10 @@ async def Pifchannels_command(_, m: Message):
                 reply_markup=reply_markup
             )
             
-            # Delete the message after 10 seconds
+            # Delete the sent message and the command message after 10 seconds
             await asyncio.sleep(10)
             await sent_message.delete()
+            await m.delete()
 
     except Exception as e:
         print(f"An error occurred: {e}")
