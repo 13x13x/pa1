@@ -135,66 +135,62 @@ async def chk(_, cb : CallbackQuery):
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Join Command ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-@app.on_message(filters.command("PanindiaFilmZ"))
-async def PanindiaFilmZ_command(_, m: Message):
+@app.on_message(filters.command("PIFChannels"))
+async def Pifchannels_command(_, m: Message):
     try:
         await app.get_chat_member(cfg.CHID, m.from_user.id)
         if m.chat.type == enums.ChatType.PRIVATE:
             keyboard = [
-                [
-                    InlineKeyboardButton("🍁 ᴛᴀᴍɪʟ - ᴋᴀɴɴᴀᴅᴀ 🎖️", url="https://t.me/+mGplIsWLBsNmMzdl")
-                ],
-                [
-                    InlineKeyboardButton("🧞‍♀️ ʜɪɴᴅɪ - ᴍᴀʟᴀʏᴀʟᴀᴍ 🧐", url="https://t.me/+Oc2rrg_Kl0hiN2Jl"),
-                    InlineKeyboardButton("🔔 ᴘᴀɴɪɴᴅɪᴀꜰɪʟᴍᴢ 🤖", url="https://t.me/PanindiaFilmZ")
-                ],
-                [
-                    InlineKeyboardButton("🛒 ᴅᴇᴀʟꜱ 🦾", url="https://t.me/Great_Indian_Shopping_loot_deals"),
-                    InlineKeyboardButton("🥵 ʀᴀʀᴇ ʜɪᴅᴅᴇɴ ᴍᴏᴠɪᴇꜱ ♥️", url="https://t.me/PIFRareHiddenMovies")
-                ],
-                [
-                    InlineKeyboardButton("🔗 ʙᴏᴛᴢ ᴀʀᴇᴀ", url="https://t.me/BoTzUpdates0"),
-                    InlineKeyboardButton("⚙ ᴍᴏᴠɪᴇꜱ ᴜᴘᴅᴀᴛᴇꜱ", url="https://t.me/PIFOficial")
-                ],
-                [
-                    InlineKeyboardButton("⪦ ᴍᴏᴠɪᴇs ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ ⪧", url="https://t.me/+37-TDCcQqltlOTRl")
-                ]
-            ]
+            keyboard = [
+        [
+            InlineKeyboardButton("🍁 ʜᴅ ᴛᴇʟᴜɢᴜ ᴍᴏᴠɪᴇs 🎖️", url="https://t.me/+wIa9vb3tRho3N2Q1")
+        ],
+        [
+            InlineKeyboardButton("🧞‍♀️ ʜɪɴᴅɪ - ᴍᴀʟᴀʏᴀʟᴀᴍ 🧐", url="https://t.me/+97U9EyGMz_s2YzQ1"),
+            InlineKeyboardButton("🔔 ᴛᴀᴍɪʟ - ᴋᴀɴɴᴀᴅᴀ 🤖", url="https://t.me/+a3-YTIF0zsFhMDc1")
+        ],
+        [
+            InlineKeyboardButton("🔥 ʜᴏʟʟʏᴡᴏᴏᴅ - ᴅᴜʙʙᴇᴅ 🎉", url="https://t.me/+9Ks800pBuq9kMmNl"),
+            InlineKeyboardButton("🙂 ᴡᴇʙ - sᴇʀɪᴇs ✨", url="https://t.me/+YcesJaZ8gwUyMTc1")
+        ],
+        [
+            InlineKeyboardButton("🥵 ʀᴀʀᴇ ʜɪᴅᴅᴇɴ ᴍᴏᴠɪᴇꜱ ♥️", url="https://t.me/PIFRareHiddenMovies")
+        ],
+        [
+            InlineKeyboardButton("☀️ ᴅᴠᴅ - ᴅᴀᴛᴀʙᴀsᴇ 🌚", url="https://t.me/PIFOficials"),
+            InlineKeyboardButton("🌿 ʜᴅ - ᴅᴀᴛᴀʙᴀsᴇ 💧", url="https://t.me/PIFOficial")
+        ],
+        [
+            InlineKeyboardButton("🔗 ʙᴏᴛᴢ ᴀʀᴇᴀ ⚙", url="https://t.me/BoTzUpdates0"),
+            InlineKeyboardButton("🥵 ᴏɴʟʏ ᴀᴅᴜʟᴛꜱ 🙈", url="https://t.me/Pakkinte_Anty_Bitlu")
+        ],
+        [
+            InlineKeyboardButton("⪦ ᴍᴏᴠɪᴇs ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ ⪧", url="https://t.me/+37-TDCcQqltlOTRl")
+        ]
+        ]
  
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await m.reply("""**🙃 __Welcome To My PanindiaFilmZ Community!! Cheak Our Channels & Groups List Below!!**__
+            await m.reply("""**__🙂 ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴍʏ ᴘᴀɴɪɴᴅɪᴀғɪʟᴍᴢ ᴄᴏᴍᴍᴜɴɪᴛʏ!! ᴄʜᴇᴀᴋ ᴏᴜʀ ᴄʜᴀɴɴᴇʟs & ɢʀᴏᴜᴘs ʟɪsᴛ ʙᴇʟᴏᴡ!!__**
 
-__**Hi.. PanindiaFilmZ Admin, I Can Provide My Channels Invite links** __
+**__      ʜᴇ'ʟʟᴏ .. ɪ ᴀᴍ ᴘᴀɴɪɴᴅɪᴀғɪʟᴍᴢ ᴀᴅᴍɪɴ 🤨__**
 
-__**🌟 #PANINDIAFILMZ #OURMENIA 3D~EXP🔥 **__
+**__✨  ᴅᴇᴀʟs 𝟸𝟺/𝟽 :- 
+@KillerLootDeals __** 
 
-**__✨  GIS Deals 24/7 :- 
-@Great_Indian_Shopping_loot_deals__**
+**__✨ ʀᴀʀᴇ ʜɪᴅᴅᴇɴ ᴀᴅᴜʟᴛ ᴍᴏᴠɪᴇs 𝟸.𝟶 
+@Telugu_Adults_Rare_Hidden_Movies __**
 
-**__✨ Rare Hidden Adult Movies 2.0 
-@Telugu_Adults_Rare_Hidden_Movies__**
+**__ᴛᴀʀɢᴇᴛ - ʀᴇᴀᴄʜɪɴɢ ᴜʀ sᴇʟғ 🎯__**
 
-**__✨ PIF Fitter Bot :-
- @PanindiaFilmz_bot__**
+**__ғᴏʀ ᴀɴʏ ǫᴜᴇʀɪᴇs - @PIFAdminBot __**
 
-**__✨ BoTz Updates :-
- @BoTzUpdates0__**
-
-**__✨ File's Added Updates :- 
- @PIFOficial__**
-
-__**© ᴀʟʟ ᴄᴏᴘʏʀɪɢʜᴛꜱ ʀᴇꜱᴇʀᴠᴇᴅ ᴛᴏ ᴍᴏᴠɪᴇ ᴏᴡɴᴇʀꜱ ᴏɴʟʏ !!**__
-
-__**ᴀʟʟ ʟᴀɴɢᴜᴀɢᴇ ɴᴇᴡ ᴍᴏᴠɪᴇꜱ ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ | தமிழ் | తెలుగు | हिंदी | മലയാളം | ಕನ್ |**__
-
-__**Target - Reaching ur Self 🎯**__
-
-__**For Any Queries - @PanIndia_Flimz_Admin_bot**__
-
-__**@PanindiaFilmZ 🔥**__""", reply_markup=reply_markup)
- 
-    except Exception as e:
-        print(f"Error: {e}")
+**__ @PanindiaFilmZ 🔥**__""",
+        reply_markup=reply_markup
+    )
+    
+    # Delete the message after 10 seconds
+    await asyncio.sleep(10)
+    await sent_message.delete()
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ info ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
