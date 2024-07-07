@@ -102,13 +102,10 @@ async def op(_, m :Message):
 
     except UserNotParticipant:
         key = InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("🍁 Join Channel", url="t.me/PanindiaFilmZ")
-                ],   
-                    InlineKeyboardButton("Try Again", "chk")
-                ]
-            ]
+    [
+        [InlineKeyboardButton("🍁 Join Channel", url="t.me/PanindiaFilmZ")],
+        [InlineKeyboardButton("Try Again", callback_data="chk")]
+    ]
         )
         await m.reply_photo("https://telegra.ph/file/d68abc6e85041ab3052e7.jpg", caption="<b>Please join @{} to Use Me.if You Alredy Joined Click Try again Button to Confirm.</b>".format(cfg.FSUB), reply_markup=key)
 
