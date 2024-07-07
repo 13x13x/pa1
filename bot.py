@@ -111,6 +111,29 @@ async def op(_, m :Message):
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ callback ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+@app.on_callback_query(filters.regex("chk"))
+async def chk(_, cb : CallbackQuery):
+    try:
+        await app.get_chat_member(cfg.CHID, cb.from_user.id)
+        if cb.message.chat.type == enums.ChatType.PRIVATE:
+            keyboard = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("🍁 Main Channel", url="https://t.me/PanindiaFilmZ"),
+                        InlineKeyboardButton("🛒 PIF Deals", url="https://t.me/PIFDeals")
+                    ],[
+                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/AutoAcceptRequest32_bot?startgroup")
+                    ]
+                ]
+            )
+            add_user(cb.from_user.id)
+            await cb.message.edit("**🌿 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\nPowerd By : @PanindiaFilmZ**".format(cb.from_user.mention, "https://t.me/PIFAdminBot"), reply_markup=keyboard, disable_web_page_preview=True)
+        print(cb.from_user.first_name +" Is started Your Bot!")
+    except UserNotParticipant:
+        await cb.answer("🙅‍♂️ You Are Not Joined On Channel Join and Try Again. 🙅‍♂️")
+
+#━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ callback ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 @app.on_message(filters.command("PIFChannels"))
 async def Pifchannels_command(_, m: Message):
     try:
