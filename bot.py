@@ -104,11 +104,12 @@ async def op(_, m :Message):
         key = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🍀 Check Again 🍀", "chk")
+                    InlineKeyboardButton("🍁 Join Channel", url="t.me/PanindiaFilmZ"),
+                    InlineKeyboardButton("Try Again", "chk")
                 ]
             ]
         )
-        await m.reply_photo("https://telegra.ph/file/d68abc6e85041ab3052e7.jpg", caption="<b>⚠️Access Denied!⚠️\n\nPlease Join @{} to use me.If you joined click check again button to confirm.</b>".format(cfg.FSUB), reply_markup=key)
+        await m.reply_photo("https://telegra.ph/file/d68abc6e85041ab3052e7.jpg", caption="<b>Please join @{} to Use Me.if You Alredy Joined Click Try again Button to Confirm.</b>".format(cfg.FSUB), reply_markup=key)
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ callback ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
