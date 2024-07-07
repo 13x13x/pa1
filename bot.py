@@ -39,7 +39,7 @@ async def approve(_, m : Message):
         add_group(m.chat.id)
         await app.approve_chat_join_request(op.id, kk.id)
         img = random.choice(gif)
-        await app.send_video(kk.id,img, "**Hello {}!\nBig Upgrade Summer Sale |Upto 75% On Home Appliances & Electronics & More,\n\nMiddle Class Persons Must Useful Our 👉 @VCdeals24 Channel !! Buy It Products On Low Price.. \n\n{}\n\nPowerd By : @PanindiaFilmZ\n🛒Deals Channel : @VCdeals24**".format(m.from_user.mention, m.chat.title))
+        await app.send_video(kk.id,img, "**Hello {}!\nUpto 75% On Home Appliances & Electronics & More,\n\nMiddle Class Persons Must Useful Our 👉 @PIFDeals Channel !! Buy It Products On Low Price.. \n\n{}\n\nPowerd By : @PanindiaFilmZ\n🛒Deals Channel : @PIFDeals**".format(m.from_user.mention, m.chat.title))
         add_user(kk.id)
     except errors.PeerIdInvalid as e:
         print("user isn't start bot(means group)")
@@ -79,7 +79,7 @@ async def op(_, m :Message):
                 [
                     [
                         InlineKeyboardButton("🗯 Channel", url="https://t.me/PanindiaFilmZ"),
-                        InlineKeyboardButton("💬 Support", url="https://t.me/Killerlootdeals")
+                        InlineKeyboardButton("💬 Support", url="https://t.me/PIFDeals")
                     ],[
                         InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/AutoAcceptRequest32_bot?startgroup")
                     ]
@@ -157,7 +157,7 @@ async def Pifchannels_command(_, m: Message):
 **__      ʜᴇ'ʟʟᴏ .. ɪ ᴀᴍ ᴘᴀɴɪɴᴅɪᴀғɪʟᴍᴢ ᴀᴅᴍɪɴ 🤨__**
 
 **__✨  ᴅᴇᴀʟs 𝟸𝟺/𝟽 :- 
-@KillerLootDeals __** 
+@PIFDeals __** 
 
 **__✨ ʀᴀʀᴇ ʜɪᴅᴅᴇɴ ᴀᴅᴜʟᴛ ᴍᴏᴠɪᴇs 𝟸.𝟶 
 @Telugu_Adults_Rare_Hidden_Movies __**
