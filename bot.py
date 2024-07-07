@@ -104,7 +104,8 @@ async def op(_, m :Message):
         key = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🍁 Join Channel", url="t.me/PanindiaFilmZ"),
+                    InlineKeyboardButton("🍁 Join Channel", url="t.me/PanindiaFilmZ")
+                ],   
                     InlineKeyboardButton("Try Again", "chk")
                 ]
             ]
