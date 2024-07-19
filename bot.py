@@ -40,7 +40,7 @@ async def approve(_, m : Message):
         add_group(m.chat.id)
         await app.approve_chat_join_request(op.id, kk.id)
         img = random.choice(gif)
-        await app.send_video(kk.id,img, "**Hello {}!\n\nMiddle Class Persons Must Useful Our 👉 @PIFDeals Channel !! Buy It Products On Low Price.. \n\n{}\n\nPowerd By : @PanindiaFilmZ**".format(m.from_user.mention, m.chat.title))
+        await app.send_video(kk.id,img, "**Hello {}!! Request Approved 🎉 \n\n Middle Class Persons Must Useful Our 👉 @PIFDeals Channel !! Buy It Products On Low Price.. \n\n{}\n\nPowerd By : @PanindiaFilmZ**".format(m.from_user.mention, m.chat.title))
         add_user(kk.id)
     except errors.PeerIdInvalid as e:
         print("user isn't start bot(means group)")
