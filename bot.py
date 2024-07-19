@@ -78,15 +78,15 @@ async def op(_, m :Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🍁 Main Channel", url="https://t.me/PanindiaFilmZ"),
-                        InlineKeyboardButton("🛒 PIF Deals", url="https://t.me/PIFDeals")
+                        InlineKeyboardButton("🍁 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ", url="https://t.me/PanindiaFilmZ"),
+                        InlineKeyboardButton("🛒 ᴘɪғ ᴅᴇᴀʟs", url="https://t.me/PIFDeals")
                     ],[
-                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/AutoAcceptRequest32_bot?startgroup")
+                        InlineKeyboardButton("➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ ➕", url="https://t.me/AutoAcceptRequest32_bot?startgroup")
                     ]
                 ]
             )
             add_user(m.from_user.id)
-            await m.reply_photo("https://telegra.ph/file/19cd8a38aa67805bd5805.jpg", caption="**🌿 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\nPowerd By : @PanindiaFilmZ**".format(m.from_user.mention, "https://t.me/PIFAdminBot"), reply_markup=keyboard)
+            await m.reply_photo("https://telegra.ph/file/19cd8a38aa67805bd5805.jpg", caption="**🌿 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\nPowerd By : @PanindiaFilmZ**".format(m.from_user.mention, "https://t.me/AutoAcceptRequest32_bot?startgroup"), reply_markup=keyboard)
     
         elif m.chat.type == enums.ChatType.GROUP or enums.ChatType.SUPERGROUP:
             keyboar = InlineKeyboardMarkup(
@@ -119,10 +119,10 @@ async def chk(_, cb : CallbackQuery):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🍁 Main Channel", url="https://t.me/PanindiaFilmZ"),
-                        InlineKeyboardButton("🛒 PIF Deals", url="https://t.me/PIFDeals")
+                        InlineKeyboardButton("🍁 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ", url="https://t.me/PanindiaFilmZ"),
+                        InlineKeyboardButton("🛒 ᴘɪғ ᴅᴇᴀʟs", url="https://t.me/PIFDeals")
                     ],[
-                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/AutoAcceptRequest32_bot?startgroup")
+                        InlineKeyboardButton("➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ ➕", url="https://t.me/AutoAcceptRequest32_bot?startgroup")
                     ]
                 ]
             )
