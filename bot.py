@@ -92,7 +92,7 @@ async def op(_, m :Message):
             keyboar = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("💁‍♂️ Start me private 💁‍♂️", url="https://t.me/AutoAcceptRequest32_bot?start=start")
+                        InlineKeyboardButton("sᴛᴀʀᴛ ᴍᴇ ᴘʀɪᴠᴀᴛᴇ..🍁", url="https://t.me/AutoAcceptRequest32_bot?start=start")
                     ]
                 ]
             )
