@@ -6,6 +6,13 @@ from database import add_user, add_group, all_users, all_groups, users, remove_u
 from configs import cfg
 import random, asyncio
 from pyrogram.errors import ChannelInvalid
+import threading
+from queue import Queue
+# For error handling, logging is crucial
+import logging
+
+# If you're implementing additional logic with time delays
+import time
 
 app = Client(
     "approver",
