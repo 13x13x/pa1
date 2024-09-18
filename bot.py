@@ -211,36 +211,26 @@ async def Pifchannels_command(_, m: Message):
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ New Commands ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 @app.on_message(filters.command("approve_all"))
-async def approve_all_requests(client, message):
+def approve_all(client, message):
+    chat_id = message.chat.id
+
     try:
-        if len(message.command) < 2:
-            await message.reply("Please provide a valid channel ID!")
+        # Fetch the list of pending join requests
+        pending_requests = client.get_chat_join_requests(chat_id)
+        
+        if not pending_requests:
+            message.reply_text("No pending join requests found.")
             return
 
-        channel_id = message.command[1]
+        # Approve all pending join requests
+        for request in pending_requests:
+            client.approve_chat_join_request(chat_id, request.user.id)
 
-        async for join_request in client.get_chat_join_requests(channel_id):
-            try:
-                await client.approve_chat_join_request(channel_id, join_request.from_user.id)
-                print(f"Approved {join_request.from_user.first_name}'s request")
-                
-                await client.send_message(join_request.from_user.id, "Your request to join the channel has been approved ✅")
-
-            except FloodWait as e:
-                print(f"Rate limited, waiting {e.value} seconds")
-                time.sleep(e.value)
+        message.reply_text("All pending join requests have been approved.")
 
     except Exception as e:
-        await message.reply(f"Failed to approve join requests: {e}")
-
-@app.on_message(filters.command("get_channel_id"))
-async def get_channel_id(client, message):
-    try:
-        chat = await client.get_chat(message.chat.id)
-        await message.reply(f"Channel ID: {chat.id}")
-    except Exception as e:
-        await message.reply(f"Error fetching channel ID: {e}")
-
+        message.reply_text(f"Failed to approve join requests: {e}")
+    
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ info ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 @app.on_message(filters.command("users") & filters.user(cfg.SUDO))
