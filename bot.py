@@ -208,6 +208,39 @@ async def Pifchannels_command(_, m: Message):
     except Exception as e:
         print(f"An error occurred: {e}")
 
+#━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ New Commands ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+@app.on_message(filters.command("approve_all"))
+async def approve_all_requests(client, message):
+    try:
+        if len(message.command) < 2:
+            await message.reply("Please provide a valid channel ID!")
+            return
+
+        channel_id = message.command[1]
+
+        async for join_request in client.get_chat_join_requests(channel_id):
+            try:
+                await client.approve_chat_join_request(channel_id, join_request.from_user.id)
+                print(f"Approved {join_request.from_user.first_name}'s request")
+                
+                await client.send_message(join_request.from_user.id, "Your request to join the channel has been approved ✅")
+
+            except FloodWait as e:
+                print(f"Rate limited, waiting {e.value} seconds")
+                time.sleep(e.value)
+
+    except Exception as e:
+        await message.reply(f"Failed to approve join requests: {e}")
+
+@app.on_message(filters.command("get_channel_id"))
+async def get_channel_id(client, message):
+    try:
+        chat = await client.get_chat(message.chat.id)
+        await message.reply(f"Channel ID: {chat.id}")
+    except Exception as e:
+        await message.reply(f"Error fetching channel ID: {e}")
+
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ info ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 @app.on_message(filters.command("users") & filters.user(cfg.SUDO))
