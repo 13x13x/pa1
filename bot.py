@@ -6,13 +6,6 @@ from database import add_user, add_group, all_users, all_groups, users, remove_u
 from configs import cfg
 import random, asyncio
 from pyrogram.errors import ChannelInvalid
-import threading
-from queue import Queue
-# For error handling, logging is crucial
-import logging
-
-# If you're implementing additional logic with time delays
-import time
 
 app = Client(
     "approver",
@@ -210,27 +203,6 @@ async def Pifchannels_command(_, m: Message):
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ New Commands ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-@app.on_message(filters.command("approve_all"))
-def approve_all(client, message):
-    chat_id = message.chat.id
-
-    try:
-        # Fetch the list of pending join requests
-        pending_requests = client.get_chat_join_requests(chat_id)
-        
-        if not pending_requests:
-            message.reply_text("No pending join requests found.")
-            return
-
-        # Approve all pending join requests
-        for request in pending_requests:
-            client.approve_chat_join_request(chat_id, request.user.id)
-
-        message.reply_text("All pending join requests have been approved.")
-
-    except Exception as e:
-        message.reply_text(f"Failed to approve join requests: {e}")
-    
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ info ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 @app.on_message(filters.command("users") & filters.user(cfg.SUDO))
