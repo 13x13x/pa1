@@ -183,6 +183,64 @@ async def bcast(_, m : Message):
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Broadcast Forward ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
+@app.on_message(filters.command("fl"))
+def fl(_, m : Message):
+    try:
+        text = message.text.splitlines()
+
+        language_map = {
+            "Tel": "Telugu",
+            "Tam": "Tamil",
+            "Eng": "English",
+            "Hin": "Hindi",
+            "Mal": "Malayalam",
+            "Kan": "Kannada",
+            "Chi": "Chinese",
+            "Spa": "Spanish",
+            "Ger": "German",
+            "Fre": "French",
+            "Rus": "Russian",
+            "Jpn": "Japanese",
+            "Kor": "Korean",
+            # Add more languages as needed
+        }
+
+        output = []
+
+        for line in text:
+            if "PanindiaFilmZ DB:" in line or line.startswith("@"):
+                continue  # Skip headers and unnecessary prefixes
+
+            movie_details = line.split('[')[0].strip()
+            languages = ", ".join(full for abbr, full in language_map.items() if abbr in line)
+
+            season = ""
+            episode = ""
+
+            if "S" in line and "E" in line:
+                season = "Season: " + line.split("S")[1].split("E")[0].strip()
+                episode = "Episode: " + line.split("E")[1].split(" ")[0].strip()
+
+            output.append(f"<b>{movie_details}</b>")
+            output.append("<blockquote>")
+            if languages:
+                output.append(f"<b>Languages: {languages}</b>")
+            if season:
+                output.append(f"<b>{season}</b>")
+            if episode:
+                output.append(f"<b>{episode}</b>")
+            output.append("</blockquote>")
+
+        # Send the filtered output, ensuring to handle large messages
+        if output:
+            message.reply("\n".join(output))
+        else:
+            message.reply("No relevant data found.")
+
+    except Exception as e:
+        print(f"Error occurred: {e}")  # Print error message for debugging
+        message.reply("An error occurred while processing your request. Please try again.")
+
 @app.on_message(filters.command("fcast") & filters.user(cfg.SUDO))
 async def fcast(_, m : Message):
     allusers = users
