@@ -183,8 +183,8 @@ async def bcast(_, m : Message):
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Broadcast Forward ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-@app.on_message(filters.command("fl"))
-def fl(_, m : Message):
+@app.on_message(filters.command("filterit"))
+def filter_text(client, message):
     try:
         text = message.text.splitlines()
 
